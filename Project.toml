@@ -1,0 +1,13 @@
+name = "PoissonBox"
+uuid = "08e701a3-8fe5-42ac-927d-67002a328398"
+authors = ["Jan Weidner <jw3126@gmail.com> and contributors"]
+version = "0.1.0"
+
+[compat]
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
