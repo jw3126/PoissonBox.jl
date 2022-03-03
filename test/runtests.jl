@@ -2,7 +2,7 @@ using PoissonBox
 using Test
 using IterativeSolvers
 import PoissonBox as PB
-using Random: Xoshiro
+using Random: MersenneTwister
 
 
 @testset "laplace eqn operator" begin
@@ -58,7 +58,7 @@ end
                   (5,4),
                   (4,3,4),
                  ]
-        y = rand(Xoshiro(0), shape...)
+        y = rand(MersenneTwister(0), shape...)
         x = solve(y)
         @test PB.forward(x) ≈ y rtol=1e-3
     end
